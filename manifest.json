@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "24h → 12h Time Converter (site-limited)",
+  "version": "1.1",
+  "description": "Convert displayed 24-hour times to 12-hour (AM/PM) format on selected sites.",
+  "icons": {
+    "48": "icon48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://example.com/*",
+        "*://www.sofascore.com/*"
+      ],
+      "js": ["content-script.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": []
+}
